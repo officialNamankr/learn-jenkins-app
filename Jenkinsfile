@@ -19,11 +19,11 @@ pipeline{
                 '''
             }
         }
-        // stage('Test'){
-        //     steps{
-        //         echo 'Testing the application'
-        //     }
-        // }
+        stage('Test'){
+            steps{
+                sh 'test -f build/index.html'
+            }
+        }
         // stage('Deploy'){
         //     steps{
         //         echo 'Deploying the application'
